@@ -1,0 +1,42 @@
+{
+  "admin": {
+    "users": {
+      "type": "resources",
+      "only": ["index","show"],
+      "collection": ["search"],
+      "member": ["lock","unlock"]
+    },
+    "e-claims": {
+      "users": {
+        "type": "resources"
+      }
+    }
+  },
+  "test": {
+    "type": "resource"
+  },
+  "contacts": {
+    "type": "resources",
+    "except": ["new","create","delete"],
+    "collection": ["search"]
+  },
+  "communications": {
+    "type": "resources"
+  },
+  "home": {
+    "type": "resource",
+    "only": "show"
+  },
+  "eleave": {
+    "admin": {
+      "entitlements": {
+        "type": "resources"
+      },
+      "groups": {
+        "type": "resources"
+      }
+    }
+  },
+
+  "root": "home#show"
+}
